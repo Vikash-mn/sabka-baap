@@ -48,8 +48,8 @@ A comprehensive network security assessment tool combining network scanning, web
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/ultimate-network-toolkit.git
-   cd ultimate-network-toolkit
+   git clone https://github.com/Vikash-mn/sabka-baap.git
+   cd abka-baap
    ```
 
 2. **Install dependencies:**
@@ -76,7 +76,7 @@ A comprehensive network security assessment tool combining network scanning, web
 ### GUI Mode
 Launch the graphical interface:
 ```bash
-python ultimate_toolkit.py
+python scan.py
 ```
 
 ### CLI Mode
