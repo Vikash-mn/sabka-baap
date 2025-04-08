@@ -1,8 +1,5 @@
 
 # Ultimate Network Security Toolkit
-
-![Toolkit Screenshot](Toolkit_Screenshot.png)
-
 A comprehensive network security assessment tool combining network scanning, website vulnerability assessment, and Wi-Fi analysis capabilities into a single powerful toolkit.
 
 ---
