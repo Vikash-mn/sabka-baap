@@ -46,7 +46,7 @@ A comprehensive network security assessment tool combining network scanning, web
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Vikash-mn/sabka-baap.git
-   cd abka-baap
+   cd sabka-baap
    ```
 
 2. **Install dependencies:**
