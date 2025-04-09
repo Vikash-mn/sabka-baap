@@ -1,14 +1,24 @@
-argparse
-beautifulsoup4
-cryptography
-dnspython
-fake-useragent
-ipaddress
 nmap
-paramiko
 requests
-scapy
+beautifulsoup4
+lxml
 selenium
+tldextract
+shodan
+python-whois
+python-wappalyzer
 sslyze
-urllib3
-wappalyzer
+Pillow
+scapy
+geoip2
+dnspython
+python-whois
+pyfiglet
+termcolor
+colorama
+json5
+rich                # Pretty CLI output
+argparse            # CLI parsing (standard but for completeness)
+nmap           # For network scanning
+nikto          # For vulnerability scanning
+nuclei         # For web vulnerability scanning
