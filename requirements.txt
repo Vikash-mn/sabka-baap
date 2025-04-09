@@ -1,0 +1,14 @@
+argparse
+beautifulsoup4
+cryptography
+dnspython
+fake-useragent
+ipaddress
+nmap
+paramiko
+requests
+scapy
+selenium
+sslyze
+urllib3
+wappalyzer
