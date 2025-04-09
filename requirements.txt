@@ -19,6 +19,5 @@ colorama
 json5
 rich                # Pretty CLI output
 argparse            # CLI parsing (standard but for completeness)
-nmap           # For network scanning
 nikto          # For vulnerability scanning
 nuclei         # For web vulnerability scanning
