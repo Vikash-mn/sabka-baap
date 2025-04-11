@@ -1,23 +1,70 @@
-nmap
+# Core Python & System
+argparse
+asyncio
+hashlib
+ipaddress
+json
+logging
+os
+re
+socket
+subprocess
+sys
+threading
+time
+datetime
+functools
+typing
+
+# Networking & Security
+python-nmap
+scapy
+sslyze
+cryptography
+ipwhois
+urllib3
+dnspython
+
+# Web & HTTP
+aiohttp
 requests
 beautifulsoup4
-lxml
+fake-useragent
+wappalyzer
+
+# Browser Automation
 selenium
-tldextract
-shodan
-python-whois
-python-wappalyzer
-sslyze
-Pillow
-scapy
-geoip2
-dnspython
-python-whois
-pyfiglet
-termcolor
-colorama
-json5
-rich                # Pretty CLI output
-argparse            # CLI parsing (standard but for completeness)
-nikto          # For vulnerability scanning
-nuclei         # For web vulnerability scanning
+
+# Distributed Task Queue
+celery
+
+# Cloud Providers
+boto3
+azure-identity
+google-cloud-compute
+
+# Reporting
+jinja2
+weasyprint
+dash
+plotly
+
+# AI/ML Analysis
+openai
+
+# Configuration & Secrets
+python-dotenv
+configparser
+
+# Async Database Drivers
+asyncpg
+aiomysql
+motor
+
+# CLI Enhancements
+click
+rich
+
+# Advanced Fuzzing
+boofuzz
+graphql-client
