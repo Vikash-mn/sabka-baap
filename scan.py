@@ -225,7 +225,7 @@ class UltimateScanner:
             return f"Error: {str(e)}"
 
 
-        def _submit_telemetry(self) -> None:
+    def _submit_telemetry(self) -> None:
         """Submit anonymous usage statistics to improve the tool"""
         if not CONFIG['telemetry']['enabled']:
             return
