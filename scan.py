@@ -560,10 +560,8 @@ class UltimateScanner:
                 client.admin.command('ismaster')
                 return False
             return True
-        except Exception as e:
-            error_msg = str(e).lower()
-            return any(auth_word in error_msg for auth_word in ['authentication', 'auth'])
-
+        except mysql.connector.errors.ProgrammingError as e:
+            return 'Access denied' in str(e)
     def _test_default_db_creds(self, host: str, port: int, db_type: str) -> List[Dict]:
         """Test common database credentials against the target database."""
         results = []
@@ -2113,7 +2111,6 @@ class UltimateScanner:
                             'url': url,
                             'status': status
                         })
-            
             return result
         except Exception as e:
             return {'error': str(e)}
