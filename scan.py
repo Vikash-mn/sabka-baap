@@ -170,9 +170,9 @@ CONFIG = {
         "screenshots_dir": "/var/log/security_scans/screenshots",
         "wordlists": {
             'dirs': '/usr/share/wordlists/dirb/common.txt',
-            'subdomains': '/usr/share/wordlists/subdomains-top1million-5000.txt',
+            'subdomains': '/usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt',
             'passwords': '/usr/share/wordlists/rockyou.txt',
-            'api_endpoints': '/usr/share/wordlists/api_wordlist.txt',
+            'api_endpoints': '/usr/share/wordlists/seclists/Discovery/Web-Content/api/api-endpoints.txt',
         },
         "tools": {
             'nmap': '/usr/bin/nmap',
@@ -181,6 +181,10 @@ CONFIG = {
             'gobuster': '/usr/bin/gobuster',
             'ffuf': '/usr/bin/ffuf',
             'sqlmap': '/usr/bin/sqlmap',
+            'dirb': '/usr/bin/dirb',
+            'hydra': '/usr/bin/hydra',
+            'john': '/usr/bin/john',
+            'hashcat': '/usr/bin/hashcat',
         }
     },
     "advanced": {
