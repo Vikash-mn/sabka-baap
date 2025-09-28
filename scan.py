@@ -63,7 +63,12 @@ from requests.packages.urllib3.util.retry import Retry
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from wappalyzer import Wappalyzer, WebPage
+try:
+    from wappalyzer import Wappalyzer, WebPage
+    WAPPALYZER_AVAILABLE = True
+except ImportError:
+    WAPPALYZER_AVAILABLE = False
+    print("[-] Wappalyzer not available - technology detection disabled")
 
 # Advanced imports for enhanced capabilities
 try:
@@ -2352,13 +2357,23 @@ class UltimateScanner:
         target_url = url if url else self.base_url
         if not target_url:
             return {'error': 'No URL available for tech detection'}
-        
-        try:
-            wappalyzer = Wappalyzer.latest()
-            webpage = WebPage.new_from_url(target_url)
-            tech_stack = wappalyzer.analyze_with_versions_and_categories(webpage)
 
-            # Enhance with additional detection
+        try:
+            tech_stack = {}
+
+            # Use Wappalyzer if available
+            if WAPPALYZER_AVAILABLE:
+                try:
+                    wappalyzer = Wappalyzer.latest()
+                    webpage = WebPage.new_from_url(target_url)
+                    tech_stack = wappalyzer.analyze_with_versions_and_categories(webpage)
+                except Exception as e:
+                    print(f"[-] Wappalyzer detection failed: {str(e)}")
+                    tech_stack = {'note': 'Wappalyzer detection failed, using fallback methods'}
+            else:
+                tech_stack = {'note': 'Wappalyzer not available, using fallback detection methods'}
+
+            # Enhance with additional detection methods
             headers = self._get_http_headers(target_url).get('headers', {})
             server = headers.get('Server', '')
             powered_by = headers.get('X-Powered-By', '')
@@ -2375,10 +2390,79 @@ class UltimateScanner:
                     'version': powered_by.split('/')[1] if '/' in powered_by else None
                 }
 
+            # Additional fallback detection
+            if not tech_stack or (isinstance(tech_stack, dict) and len(tech_stack) <= 2):
+                fallback_detection = self._fallback_tech_detection(target_url, headers)
+                tech_stack.update(fallback_detection)
+
             return tech_stack
         except Exception as e:
             return {'error': str(e)}
-        
+
+    def _fallback_tech_detection(self, url: str, headers: Dict) -> Dict:
+        """Fallback technology detection when Wappalyzer is not available"""
+        detected_tech = {}
+
+        try:
+            # Analyze headers for technology signatures
+            server = headers.get('Server', '').lower()
+            powered_by = headers.get('X-Powered-By', '').lower()
+            content_type = headers.get('Content-Type', '').lower()
+
+            # Web server detection
+            if 'apache' in server:
+                detected_tech['apache'] = {'name': 'Apache', 'categories': ['Web Servers']}
+            elif 'nginx' in server:
+                detected_tech['nginx'] = {'name': 'Nginx', 'categories': ['Web Servers']}
+            elif 'iis' in server:
+                detected_tech['iis'] = {'name': 'IIS', 'categories': ['Web Servers']}
+            elif 'lighttpd' in server:
+                detected_tech['lighttpd'] = {'name': 'Lighttpd', 'categories': ['Web Servers']}
+
+            # Platform detection
+            if 'php' in powered_by:
+                php_version = self._extract_version_from_headers('php', url)
+                detected_tech['php'] = {
+                    'name': 'PHP',
+                    'categories': ['Programming Languages'],
+                    'versions': [php_version] if php_version else []
+                }
+            elif 'asp.net' in powered_by:
+                detected_tech['asp.net'] = {'name': 'ASP.NET', 'categories': ['Web Frameworks']}
+            elif 'jsp' in powered_by or 'java' in powered_by:
+                detected_tech['java'] = {'name': 'Java', 'categories': ['Programming Languages']}
+
+            # CMS detection based on common patterns
+            if 'wp-content' in url or 'wordpress' in powered_by.lower():
+                detected_tech['wordpress'] = {'name': 'WordPress', 'categories': ['CMS']}
+            elif 'drupal' in server.lower() or 'drupal' in powered_by.lower():
+                detected_tech['drupal'] = {'name': 'Drupal', 'categories': ['CMS']}
+            elif 'joomla' in server.lower() or 'joomla' in powered_by.lower():
+                detected_tech['joomla'] = {'name': 'Joomla', 'categories': ['CMS']}
+
+            # JavaScript framework detection
+            if 'x-generator' in headers:
+                generator = headers['x-generator'].lower()
+                if 'jekyll' in generator:
+                    detected_tech['jekyll'] = {'name': 'Jekyll', 'categories': ['Static Site Generator']}
+                elif 'gatsby' in generator:
+                    detected_tech['gatsby'] = {'name': 'Gatsby', 'categories': ['Web Frameworks']}
+
+            # Database detection
+            if 'x-powered-by' in headers and 'mysql' in powered_by:
+                detected_tech['mysql'] = {'name': 'MySQL', 'categories': ['Databases']}
+            elif 'x-powered-by' in headers and 'postgresql' in powered_by:
+                detected_tech['postgresql'] = {'name': 'PostgreSQL', 'categories': ['Databases']}
+
+            # Add confidence scores
+            for tech_name, tech_info in detected_tech.items():
+                tech_info['confidence'] = 0.7  # Medium confidence for fallback detection
+
+        except Exception as e:
+            detected_tech['fallback_error'] = str(e)
+
+        return detected_tech
+
     def _scan_vulnerabilities(self) -> Dict:
         """Scan for common vulnerabilities"""
         result = {
