@@ -68,3 +68,44 @@ rich
 # Advanced Fuzzing
 boofuzz
 graphql-client
+
+# Database Support
+mysql-connector-python
+psycopg2-binary
+pymongo
+
+# Machine Learning & AI
+torch
+transformers
+scikit-learn
+numpy
+
+# Container & Orchestration
+docker
+kubernetes
+yara-python
+
+# VirusTotal API
+virustotal-python
+
+# Additional Security Tools
+shodan
+censys
+binaryedge-python-api
+
+# Advanced Web Testing
+graphql-core
+websockets
+
+# Performance & Async
+uvloop
+httpx
+
+# Data Processing
+pandas
+matplotlib
+seaborn
+
+# Enhanced CLI
+typer
+questionary
