@@ -3,7 +3,7 @@
 Ultimate Security Scanner GUI
 A comprehensive graphical interface for the Ultimate Linux Network Security Scanner
 """
-# In scanner_gui.py, line 8 - This import will fail
+# Import required modules
 from scan import UltimateScanner, CONFIG
 import tkinter as tk
 from tkinter import ttk, scrolledtext, filedialog, messagebox
@@ -13,7 +13,6 @@ import os
 from datetime import datetime
 import queue
 import sys
-from scan import UltimateScanner, CONFIG
 
 class SecurityScannerGUI:
     def __init__(self, root):
