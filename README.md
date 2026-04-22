@@ -114,7 +114,7 @@ Your Ultimate Security Scanner includes **27+ different security technologies** 
 **Example Usage:**
 ```bash
 # Scan entire network
-python scan.py 192.168.1.0/24 -t network
+python main.py 192.168.1.0/24 -t network
 
 # What you get:
 # ✅ 47 devices discovered
@@ -151,7 +151,7 @@ python scan.py 192.168.1.0/24 -t network
 **Example Usage:**
 ```bash
 # Comprehensive web security testing
-python scan.py example.com -t web --aggressive
+python main.py example.com -t web --aggressive
 
 # What you get:
 # ✅ SQL Injection: 3 vulnerabilities found
@@ -184,7 +184,7 @@ python scan.py example.com -t web --aggressive
 **Example Usage:**
 ```bash
 # Database security assessment
-python scan.py target.com -t full
+python main.py target.com -t full
 
 # What you discover:
 # ✅ MySQL: Default credentials found
@@ -217,7 +217,7 @@ python scan.py target.com -t full
 **Example Usage:**
 ```bash
 # SSL security analysis
-python scan.py https://example.com -t full
+python main.py https://example.com -t full
 
 # What you find:
 # ✅ Certificate expires in 30 days
@@ -248,7 +248,7 @@ python scan.py https://example.com -t full
 **Example Usage:**
 ```bash
 # Container security scanning
-python scan.py registry.example.com -t ultra
+python main.py registry.example.com -t ultra
 
 # What you discover:
 # ✅ 12 Docker images scanned
@@ -280,7 +280,7 @@ python scan.py registry.example.com -t ultra
 **Example Usage:**
 ```bash
 # IoT security assessment
-python scan.py 192.168.1.0/24 -t network
+python main.py 192.168.1.0/24 -t network
 
 # What you find:
 # ✅ 8 IoT devices discovered
@@ -313,7 +313,7 @@ python scan.py 192.168.1.0/24 -t network
 **Example Usage:**
 ```bash
 # AI-powered vulnerability detection
-python scan.py example.com -t ultra
+python main.py example.com -t ultra
 
 # What you get:
 # ✅ ML analysis: 15 suspicious patterns
@@ -347,7 +347,7 @@ python scan.py example.com -t ultra
 **Example Usage:**
 ```bash
 # Stealthy scanning
-python scan.py target.com -t full --stealth --tor
+python main.py target.com -t full --stealth --tor
 
 # What you get:
 # ✅ Detection avoided: 99% success rate
@@ -642,7 +642,7 @@ python scan.py target.com -t full --stealth --tor
 
 **Command:**
 ```bash
-python scan.py example.com -t quick
+python main.py example.com -t quick
 ```
 
 **What it includes:**
@@ -682,7 +682,7 @@ python scan.py example.com -t quick
 
 **Command:**
 ```bash
-python scan.py example.com -t full --aggressive
+python main.py example.com -t full --aggressive
 ```
 
 **What it includes:**
@@ -731,7 +731,7 @@ python scan.py example.com -t full --aggressive
 
 **Command:**
 ```bash
-python scan.py https://example.com -t web --aggressive
+python main.py https://example.com -t web --aggressive
 ```
 
 **What it includes:**
@@ -784,7 +784,7 @@ python scan.py https://example.com -t web --aggressive
 
 **Command:**
 ```bash
-python scan.py 192.168.1.0/24 -t network --stealth
+python main.py 192.168.1.0/24 -t network --stealth
 ```
 
 **What it includes:**
@@ -828,7 +828,7 @@ python scan.py 192.168.1.0/24 -t network --stealth
 
 **Command:**
 ```bash
-python scan.py example.com -t vulnerability
+python main.py example.com -t vulnerability
 ```
 
 **What it includes:**
@@ -875,7 +875,7 @@ python scan.py example.com -t vulnerability
 
 **Command:**
 ```bash
-python scan.py example.com -t ultra --aggressive
+python main.py example.com -t ultra --aggressive
 ```
 
 **What it includes:**
@@ -920,7 +920,7 @@ python scan.py example.com -t ultra --aggressive
 #### **Example 1: Website Security Audit**
 ```bash
 # Complete web security assessment
-python scan.py example.com -t full --aggressive -v -o website_audit.json
+python main.py example.com -t full --aggressive -v -o website_audit.json
 
 # What you get:
 # ✅ SQL Injection vulnerabilities found
@@ -957,7 +957,7 @@ python scan.py example.com -t full --aggressive -v -o website_audit.json
 #### **Example 2: Enterprise Network Assessment**
 ```bash
 # Complete enterprise security audit
-python scan.py company.com -t ultra --aggressive -v -o enterprise_audit.json
+python main.py company.com -t ultra --aggressive -v -o enterprise_audit.json
 
 # What you discover:
 # ✅ External infrastructure analysis
@@ -995,7 +995,7 @@ python scan.py company.com -t ultra --aggressive -v -o enterprise_audit.json
 #### **Example 3: Kali Linux Wireless Assessment**
 ```bash
 # Complete wireless security assessment (Kali optimized)
-sudo python scan.py --wifi-scan --aggressive
+sudo python main.py --wifi-scan --aggressive
 
 # What you find:
 # ✅ 12 WiFi networks discovered
@@ -1041,7 +1041,7 @@ sudo python scan.py --wifi-scan --aggressive
 #### **Example 4: GUI-Based Web Assessment**
 ```bash
 # Launch the graphical interface
-python gui_launcher.py
+python main.py --gui
 
 # GUI Usage Steps:
 # 1. Enter target: example.com
@@ -1063,7 +1063,7 @@ python gui_launcher.py
 #### **Example 5: GUI Network Analysis**
 ```bash
 # Network infrastructure analysis via GUI
-python gui_launcher.py
+python main.py --gui
 
 # GUI Steps:
 # 1. Target: 192.168.1.0/24
@@ -1080,7 +1080,7 @@ python gui_launcher.py
 #### **Example 6: Custom Configuration Testing**
 ```bash
 # Custom security configuration testing
-python scan.py target.com -t full --custom-headers --security-audit
+python main.py target.com -t full --custom-headers --security-audit
 
 # What it tests:
 # ✅ Custom HTTP headers
@@ -1093,7 +1093,7 @@ python scan.py target.com -t full --custom-headers --security-audit
 #### **Example 7: API Security Testing**
 ```bash
 # Mobile app backend security testing
-python scan.py api.company.com -t web --aggressive --api-testing
+python main.py api.company.com -t web --aggressive --api-testing
 
 # What you discover:
 # ✅ REST API vulnerabilities
@@ -1107,7 +1107,7 @@ python scan.py api.company.com -t web --aggressive --api-testing
 #### **Example 8: Cloud Infrastructure Assessment**
 ```bash
 # Cloud security assessment
-python scan.py cloud.company.com -t full --cloud-scan --container-scan
+python main.py cloud.company.com -t full --cloud-scan --container-scan
 
 # What you get:
 # ✅ AWS/Azure/GCP resource discovery
@@ -1123,7 +1123,7 @@ python scan.py cloud.company.com -t full --cloud-scan --container-scan
 #### **Example 9: Stealthy Reconnaissance**
 ```bash
 # Low and slow reconnaissance scanning
-python scan.py target.com -t full --stealth --tor --rate-limit 10
+python main.py target.com -t full --stealth --tor --rate-limit 10
 
 # Stealth techniques used:
 # ✅ Tor network routing
@@ -1136,7 +1136,7 @@ python scan.py target.com -t full --stealth --tor --rate-limit 10
 #### **Example 10: Anonymous Scanning**
 ```bash
 # Anonymous scanning through proxies
-proxychains python scan.py target.com -t full --stealth
+proxychains python main.py target.com -t full --stealth
 
 # What you get:
 # ✅ Proxy chain routing
@@ -1149,7 +1149,7 @@ proxychains python scan.py target.com -t full --stealth
 ### **Example 2: Network Penetration Testing**
 ```bash
 # Complete network security assessment
-python scan.py 192.168.1.0/24 -t network --aggressive
+python main.py 192.168.1.0/24 -t network --aggressive
 
 # What you discover:
 # ✅ 47 devices on network
@@ -1164,7 +1164,7 @@ python scan.py 192.168.1.0/24 -t network --aggressive
 ### **Example 3: Wireless Security Assessment**
 ```bash
 # WiFi security testing (Kali Linux)
-sudo python scan.py --wifi-scan
+sudo python main.py --wifi-scan
 
 # What you find:
 # ✅ 12 WiFi networks discovered
@@ -1178,7 +1178,7 @@ sudo python scan.py --wifi-scan
 ### **Example 4: Enterprise Security Audit**
 ```bash
 # Complete enterprise assessment
-python scan.py company.com -t ultra --aggressive
+python main.py company.com -t ultra --aggressive
 
 # What you get:
 # ✅ External infrastructure analysis
@@ -1194,7 +1194,7 @@ python scan.py company.com -t ultra --aggressive
 ### **Example 5: Mobile App Backend Testing**
 ```bash
 # API security assessment
-python scan.py api.company.com -t web --aggressive
+python main.py api.company.com -t web --aggressive
 
 # What you discover:
 # ✅ REST API vulnerabilities
@@ -1297,58 +1297,58 @@ VULNERABILITIES FOUND:
 ### **Penetration Testing Workflow**
 ```bash
 # 1. Reconnaissance
-python scan.py target.com -t quick
+python main.py target.com -t quick
 
 # 2. Vulnerability Assessment
-python scan.py target.com -t vulnerability
+python main.py target.com -t vulnerability
 
 # 3. Web Application Testing
-python scan.py target.com -t web --aggressive
+python main.py target.com -t web --aggressive
 
 # 4. Network Analysis
-python scan.py target.com -t network
+python main.py target.com -t network
 
 # 5. Final Comprehensive Scan
-python scan.py target.com -t ultra --aggressive
+python main.py target.com -t ultra --aggressive
 ```
 
 ### **Red Team Operations**
 ```bash
 # Stealthy scanning
-python scan.py target.com -t full --stealth
+python main.py target.com -t full --stealth
 
 # Anonymous scanning
-proxychains python scan.py target.com -t full
+proxychains python main.py target.com -t full
 
 # Distributed scanning
-python scan.py target.com -t full --proxy-list proxies.txt
+python main.py target.com -t full --proxy-list proxies.txt
 ```
 
 ### **Bug Bounty Hunting**
 ```bash
 # Comprehensive web testing
-python scan.py target.com -t web --aggressive
+python main.py target.com -t web --aggressive
 
 # API testing
-python scan.py api.target.com -t web
+python main.py api.target.com -t web
 
 # Subdomain enumeration
-python scan.py target.com --subdomains
+python main.py target.com --subdomains
 
 # Directory brute-forcing
-python scan.py target.com --dirs
+python main.py target.com --dirs
 ```
 
 ### **Security Research**
 ```bash
 # Custom vulnerability testing
-python scan.py target.com -t vulnerability --custom-payloads
+python main.py target.com -t vulnerability --custom-payloads
 
 # Exploit development
-python scan.py target.com -t full --exploit-dev
+python main.py target.com -t full --exploit-dev
 
 # Zero-day hunting
-python scan.py target.com -t ultra --ai-detection
+python main.py target.com -t ultra --ai-detection
 ```
 
 ---
@@ -1383,7 +1383,7 @@ python scan.py target.com -t ultra --ai-detection
 
 The scanner uses multiple configuration files for different purposes:
 
-#### **1. Main Configuration (`CONFIG` in scan.py)**
+#### **1. Main Configuration (`CONFIG` in core/engine.py)**
 ```python
 CONFIG = {
     "api_keys": {
@@ -1613,7 +1613,7 @@ CONFIG['advanced_evasion'] = {
 ### **Use Case 1: E-commerce Security**
 ```bash
 # Complete e-commerce security audit
-python scan.py shop.example.com -t ultra --aggressive
+python main.py shop.example.com -t ultra --aggressive
 
 # Tests:
 # Payment gateway security
@@ -1627,7 +1627,7 @@ python scan.py shop.example.com -t ultra --aggressive
 ### **Use Case 2: Government Agency**
 ```bash
 # Military-grade security assessment
-python scan.py agency.gov -t ultra --aggressive --stealth
+python main.py agency.gov -t ultra --aggressive --stealth
 
 # Includes:
 # Classified data protection
@@ -1640,7 +1640,7 @@ python scan.py agency.gov -t ultra --aggressive --stealth
 ### **Use Case 3: Financial Institution**
 ```bash
 # Banking security compliance
-python scan.py bank.com -t ultra --aggressive
+python main.py bank.com -t ultra --aggressive
 
 # Focuses on:
 # PCI DSS compliance
@@ -1653,7 +1653,7 @@ python scan.py bank.com -t ultra --aggressive
 ### **Use Case 4: Healthcare Organization**
 ```bash
 # HIPAA compliance assessment
-python scan.py hospital.org -t ultra
+python main.py hospital.org -t ultra
 
 # Ensures:
 # Patient data protection
@@ -1666,7 +1666,7 @@ python scan.py hospital.org -t ultra
 ### **Use Case 5: Educational Institution**
 ```bash
 # Campus network security
-python scan.py university.edu -t network
+python main.py university.edu -t network
 
 # Covers:
 # Student data protection
@@ -1683,7 +1683,7 @@ python scan.py university.edu -t network
 ### **Example 1: E-commerce Website Security**
 ```bash
 # Complete e-commerce security audit
-python scan.py shop.example.com -t ultra --aggressive -v -o ecommerce_audit.json
+python main.py shop.example.com -t ultra --aggressive -v -o ecommerce_audit.json
 
 # Expected Output:
 [*] Starting ultra scan of shop.example.com
@@ -1763,7 +1763,7 @@ python scan.py shop.example.com -t ultra --aggressive -v -o ecommerce_audit.json
 ### **Example 2: Network Infrastructure Assessment**
 ```bash
 # Complete network security assessment
-python scan.py 192.168.1.0/24 -t network --aggressive -v
+python main.py 192.168.1.0/24 -t network --aggressive -v
 
 # Expected Output:
 [*] Starting network scan of 192.168.1.0/24
@@ -1828,7 +1828,7 @@ python scan.py 192.168.1.0/24 -t network --aggressive -v
 ### **Example 3: Wireless Security Assessment**
 ```bash
 # Complete wireless security assessment (Kali Linux)
-sudo python scan.py --wifi-scan --aggressive
+sudo python main.py --wifi-scan --aggressive
 
 # Expected Output:
 [*] Starting wireless security assessment
@@ -1887,7 +1887,7 @@ sudo python scan.py --wifi-scan --aggressive
 ### **Example 4: Mobile Application Backend**
 ```bash
 # Mobile app backend security testing
-python scan.py api.mobileapp.com -t web --aggressive --api-testing
+python main.py api.mobileapp.com -t web --aggressive --api-testing
 
 # Expected Output:
 [*] Starting API security assessment
@@ -1934,7 +1934,7 @@ python scan.py api.mobileapp.com -t web --aggressive --api-testing
 ### **Example 5: Cloud Infrastructure Assessment**
 ```bash
 # Cloud security assessment
-python scan.py cloud.company.com -t full --cloud-scan --container-scan
+python main.py cloud.company.com -t full --cloud-scan --container-scan
 
 # Expected Output:
 [*] Starting cloud infrastructure assessment
@@ -2015,19 +2015,19 @@ python scan.py cloud.company.com -t full --cloud-scan --container-scan
 ### **🔥 Ready to Use:**
 ```bash
 # Launch GUI (easiest)
-python gui_launcher.py
+python main.py --gui
 
 # Quick CLI scan
-python scan.py target.com -t quick
+python main.py target.com -t quick
 
 # Comprehensive scan
-python scan.py target.com -t ultra --aggressive
+python main.py target.com -t ultra --aggressive
 
 # Network assessment
-python scan.py 192.168.1.0/24 -t network
+python main.py 192.168.1.0/24 -t network
 
 # Web application testing
-python scan.py target.com -t web --aggressive
+python main.py target.com -t web --aggressive
 ```
 
 **Your Ultimate Security Scanner is ready to tackle any cybersecurity challenge!** 💀⚡🔥
@@ -2045,22 +2045,22 @@ python scan.py target.com -t web --aggressive
 ## **TARGET SPECIFICATION**
 ```bash
 # Domain name
-python scan.py example.com
+python main.py example.com
 
 # IP address
-python scan.py 192.168.1.1
+python main.py 192.168.1.1
 
 # URL with protocol
-python scan.py https://example.com
+python main.py https://example.com
 
 # IP range (CIDR notation)
-python scan.py 192.168.1.0/24
+python main.py 192.168.1.0/24
 
 # Multiple targets
-python scan.py target1.com target2.com
+python main.py target1.com target2.com
 
 # From file
-python scan.py -f targets.txt
+python main.py -f targets.txt
 ```
 
 ---
@@ -2070,22 +2070,22 @@ python scan.py -f targets.txt
 -t, --type SCAN_TYPE    # Choose scan type
 
 # Quick scan (fast, basic)
-python scan.py target.com -t quick
+python main.py target.com -t quick
 
 # Full scan (comprehensive)
-python scan.py target.com -t full
+python main.py target.com -t full
 
 # Web application focus
-python scan.py target.com -t web
+python main.py target.com -t web
 
 # Network infrastructure focus
-python scan.py target.com -t network
+python main.py target.com -t network
 
 # Vulnerability assessment
-python scan.py target.com -t vulnerability
+python main.py target.com -t vulnerability
 
 # Maximum coverage (all features)
-python scan.py target.com -t ultra
+python main.py target.com -t ultra
 ```
 
 ---
@@ -2288,61 +2288,61 @@ python scan.py target.com -t ultra
 
 ### **🔍 Basic Web Assessment**
 ```bash
-python scan.py example.com -t quick -v
+python main.py example.com -t quick -v
 # Quick overview of web security posture
 ```
 
 ### **🌐 Comprehensive Web Testing**
 ```bash
-python scan.py example.com -t web --aggressive --sqli --xss --lfi
+python main.py example.com -t web --aggressive --sqli --xss --lfi
 # Complete web application security testing
 ```
 
 ### **🏠 Network Infrastructure Analysis**
 ```bash
-python scan.py 192.168.1.0/24 -t network --os-detection --service-detection
+python main.py 192.168.1.0/24 -t network --os-detection --service-detection
 # Complete network security assessment
 ```
 
 ### **💀 Maximum Security Coverage**
 ```bash
-python scan.py example.com -t ultra --aggressive --ai-detection --container-scan
+python main.py example.com -t ultra --aggressive --ai-detection --container-scan
 # Every possible security test enabled
 ```
 
 ### **🎭 Stealthy Reconnaissance**
 ```bash
-python scan.py example.com -t full --stealth --tor --rate-limit 10
+python main.py example.com -t full --stealth --tor --rate-limit 10
 # Low and slow reconnaissance scanning
 ```
 
 ### **🏢 Enterprise Security Audit**
 ```bash
-python scan.py company.com -t ultra --aggressive --compliance-report -o enterprise_audit.json
+python main.py company.com -t ultra --aggressive --compliance-report -o enterprise_audit.json
 # Complete enterprise security assessment
 ```
 
 ### **📱 Mobile App Backend Testing**
 ```bash
-python scan.py api.company.com -t web --aggressive --api-testing
+python main.py api.company.com -t web --aggressive --api-testing
 # Mobile application backend security
 ```
 
 ### **☁️ Cloud Infrastructure Assessment**
 ```bash
-python scan.py cloud.company.com -t full --cloud-scan --container-scan
+python main.py cloud.company.com -t full --cloud-scan --container-scan
 # Cloud and container security testing
 ```
 
 ### **📡 Wireless Security Assessment**
 ```bash
-sudo python scan.py --wifi-scan --wifi-capture TargetNetwork
+sudo python main.py --wifi-scan --wifi-capture TargetNetwork
 # Complete wireless security assessment
 ```
 
 ### **🔧 Custom Configuration Testing**
 ```bash
-python scan.py target.com -t full --custom-headers --security-audit
+python main.py target.com -t full --custom-headers --security-audit
 # Custom security configuration testing
 ```
 
@@ -2383,19 +2383,19 @@ python scan.py target.com -t full --custom-headers --security-audit
 
 **Fast Scanning:**
 ```bash
-python scan.py target.com -t full --aggressive --threads 1000 --rate-limit 1000
+python main.py target.com -t full --aggressive --threads 1000 --rate-limit 1000
 # Maximum speed, high detection risk
 ```
 
 **Stealthy Scanning:**
 ```bash
-python scan.py target.com -t full --stealth --threads 10 --rate-limit 1 --tor
+python main.py target.com -t full --stealth --threads 10 --rate-limit 1 --tor
 # Maximum stealth, slower execution
 ```
 
 **Balanced Approach:**
 ```bash
-python scan.py target.com -t full --threads 100 --rate-limit 50
+python main.py target.com -t full --threads 100 --rate-limit 50
 # Good balance of speed and stealth
 ```
 
@@ -2423,41 +2423,41 @@ python scan.py target.com -t full --threads 100 --rate-limit 50
 # Check connectivity
 ping target.com
 # Verify target format
-python scan.py --validate-targets target.com
+python main.py --validate-targets target.com
 ```
 
 **Issue: No vulnerabilities found**
 ```bash
 # Enable aggressive testing
-python scan.py target.com --aggressive
+python main.py target.com --aggressive
 # Try different scan type
-python scan.py target.com -t web --aggressive
+python main.py target.com -t web --aggressive
 ```
 
 **Issue: Scan too slow**
 ```bash
 # Increase thread count
-python scan.py target.com --threads 500
+python main.py target.com --threads 500
 # Reduce scope
-python scan.py target.com -t quick
+python main.py target.com -t quick
 ```
 
 **Issue: High memory usage**
 ```bash
 # Limit crawl depth
-python scan.py target.com --max-depth 3
+python main.py target.com --max-depth 3
 # Reduce concurrent threads
-python scan.py target.com --threads 50
+python main.py target.com --threads 50
 ```
 
 **Issue: Detection by target**
 ```bash
 # Use stealth mode
-python scan.py target.com --stealth
+python main.py target.com --stealth
 # Use Tor
-python scan.py target.com --tor
+python main.py target.com --tor
 # Reduce rate
-python scan.py target.com --rate-limit 1
+python main.py target.com --rate-limit 1
 ```
 
 ---
@@ -2501,12 +2501,11 @@ python scan.py target.com --rate-limit 1
 
 ```bash
 # 1. Download the scanner files to your Kali machine
-# 2. Run the automated setup
-sudo python3 kali_setup.py
+# 2. Install dependencies
+pip install -r requirements.txt
 
-# 3. Or use the bash script
-chmod +x kali_install.sh
-./kali_install.sh
+# 3. Run the scanner
+python main.py --help
 ```
 
 ### 📦 What Kali Provides (Pre-installed)
@@ -2566,31 +2565,31 @@ sudo apt install -y python3-pip nmap nikto sqlmap dirb \
 # 3. Install Python dependencies
 pip3 install -r requirements.txt
 
-# 4. Run setup script
-python3 kali_setup.py
+# 4. Test installation
+python main.py --help
 ```
 
 ### 🎯 Kali-Specific Usage
 
 **WiFi Scanning:**
 ```bash
-sudo python scan.py --wifi-scan
-sudo python scan.py --wifi-capture TARGET_SSID
+sudo python main.py --wifi-scan
+sudo python main.py --wifi-capture TARGET_SSID
 ```
 
 **Bluetooth Discovery:**
 ```bash
-sudo python scan.py --bluetooth-scan
+sudo python main.py --bluetooth-scan
 ```
 
 **Metasploit Integration:**
 ```bash
-python scan.py target -t full --metasploit
+python main.py target -t full --metasploit
 ```
 
 **Advanced Evasion:**
 ```bash
-python scan.py target -t ultra --proxychains --tor
+python main.py target -t ultra --proxychains --tor
 ```
 
 ### 📊 Kali Performance Benefits
@@ -2615,20 +2614,19 @@ The scanner automatically detects Kali Linux and applies optimizations:
 
 **Your scanner becomes a BEAST on Kali Linux!** 🔥
 
-### 📁 Kali-Specific Files Created
+### 📁 Project Structure
 
-**`kali_install.sh`** - Automated installation script for Kali Linux
-```bash
-chmod +x kali_install.sh
-./kali_install.sh
 ```
-
-**`kali_setup.py`** - Python setup script with Kali optimizations
-```bash
-python3 kali_setup.py
+main.py          # Single entry point (CLI)
+cli.py           # CLI interface (internal)
+gui/app.py       # GUI interface (internal)
+core/            # Core scanning engine
+config/          # Configuration modules
+utils/           # Helper utilities
+modules/         # Scanning modules
+services/        # Report/risk services
+integrations/    # API integrations (VirusTotal, Shodan, etc.)
 ```
-
-**`kali_config.json`** - Kali-specific configuration with optimized settings
 - Enhanced thread counts (1000 vs 50)
 - Kali tool paths integration
 - Extended wordlists from Seclists
@@ -2709,8 +2707,8 @@ pip install -r requirements.txt
    ```
 4. **Test installation**:
    ```bash
-   python scan.py --help
-   python gui_launcher.py
+   python main.py --help
+   python main.py --gui
    ```
 
 ## 🎯 Quick Start
@@ -2718,26 +2716,26 @@ pip install -r requirements.txt
 ### Command-Line Quick Start
 ```bash
 # Quick scan of a website
-python scan.py example.com -t quick
+python main.py example.com -t quick
 
 # Comprehensive scan with verbose output
-python scan.py example.com -t full -v
+python main.py example.com -t full -v
 
 # Ultra scan with all advanced features
-python scan.py example.com -t ultra --aggressive
+python main.py example.com -t ultra --aggressive
 ```
 
 ### GUI Quick Start
 ```bash
 # Launch the graphical interface
-python gui_launcher.py
+python main.py --gui
 ```
 
 ## 💻 Command-Line Usage
 
 ### Basic Syntax
 ```bash
-python scan.py <target> [options]
+python main.py <target> [options]
 ```
 
 ### Target Specification
@@ -2760,23 +2758,23 @@ python scan.py <target> [options]
 #### Examples
 ```bash
 # Quick network scan
-python scan.py 192.168.1.1 -t quick
+python main.py 192.168.1.1 -t quick
 
 # Full web application scan
-python scan.py example.com -t full --aggressive -v
+python main.py example.com -t full --aggressive -v
 
 # Ultra scan with all features
-python scan.py example.com -t ultra -o results.json
+python main.py example.com -t ultra -o results.json
 
 # Stealthy vulnerability scan
-python scan.py example.com -t vulnerability --stealth
+python main.py example.com -t vulnerability --stealth
 ```
 
 ## 🖥️ GUI Usage
 
 ### Launching the GUI
 ```bash
-python gui_launcher.py
+python main.py --gui
 ```
 
 ### Step-by-Step Usage
@@ -2828,7 +2826,7 @@ Navigate through result tabs:
 ## ⚙️ Configuration
 
 ### API Keys Configuration
-Edit the `CONFIG` section in `scan.py`:
+Edit the `CONFIG` section in `core/engine.py`:
 
 ```python
 "api_keys": {
@@ -2929,7 +2927,7 @@ Edit the `CONFIG` section in `scan.py`:
 ### Example 1: Website Security Audit
 ```bash
 # Command Line
-python scan.py example.com -t full --aggressive -v -o website_audit.json
+python main.py example.com -t full --aggressive -v -o website_audit.json
 
 # GUI
 # 1. Enter: example.com
@@ -2943,7 +2941,7 @@ python scan.py example.com -t full --aggressive -v -o website_audit.json
 ### Example 2: Network Infrastructure Scan
 ```bash
 # Command Line
-python scan.py 192.168.1.0/24 -t network --stealth -v
+python main.py 192.168.1.0/24 -t network --stealth -v
 
 # GUI
 # 1. Enter: 192.168.1.0/24
@@ -2956,7 +2954,7 @@ python scan.py 192.168.1.0/24 -t network --stealth -v
 ### Example 3: Web Application Testing
 ```bash
 # Command Line
-python scan.py https://testphp.vulnweb.com -t web --aggressive
+python main.py https://testphp.vulnweb.com -t web --aggressive
 
 # GUI
 # 1. Enter: https://testphp.vulnweb.com
@@ -2969,7 +2967,7 @@ python scan.py https://testphp.vulnweb.com -t web --aggressive
 ### Example 4: Comprehensive Security Audit
 ```bash
 # Command Line
-python scan.py company.com -t ultra --aggressive -v -o comprehensive_audit.json
+python main.py company.com -t ultra --aggressive -v -o comprehensive_audit.json
 
 # GUI
 # 1. Enter: company.com
@@ -2982,37 +2980,37 @@ python scan.py company.com -t ultra --aggressive -v -o comprehensive_audit.json
 ### Example 5: Kali Linux Wireless Assessment
 ```bash
 # WiFi Network Scanning (Kali optimized)
-sudo python scan.py --wifi-scan
+sudo python main.py --wifi-scan
 
 # Capture WPA handshake
-sudo python scan.py --wifi-capture "TargetNetwork"
+sudo python main.py --wifi-capture "TargetNetwork"
 
 # Bluetooth device discovery
-sudo python scan.py --bluetooth-scan
+sudo python main.py --bluetooth-scan
 ```
 
 ### Example 6: Kali Linux Penetration Testing
 ```bash
 # Full penetration testing suite
-sudo python scan.py target.com -t ultra --aggressive --metasploit
+sudo python main.py target.com -t ultra --aggressive --metasploit
 
 # Anonymous scanning through Tor
-proxychains python scan.py target.com -t full --stealth
+proxychains python main.py target.com -t full --stealth
 
 # GPU-accelerated password cracking integration
-python scan.py target.com -t full --hashcat-enable
+python main.py target.com -t full --hashcat-enable
 ```
 
 ### Example 7: Kali Linux Enterprise Assessment
 ```bash
 # Large network assessment
-sudo python scan.py 10.0.0.0/8 -t network --aggressive -v
+sudo python main.py 10.0.0.0/8 -t network --aggressive -v
 
 # Web application security audit
-python scan.py webapp.company.com -t web --aggressive --burpsuite
+python main.py webapp.company.com -t web --aggressive --burpsuite
 
 # Container security analysis
-python scan.py docker-registry.com -t ultra --container-scan
+python main.py docker-registry.com -t ultra --container-scan
 ```
 
 ## 🚨 Troubleshooting
@@ -3064,10 +3062,10 @@ python -c "from scanner_gui import main; main()"
 ### Debug Mode
 ```bash
 # Enable debug logging
-python scan.py target -t full -vv
+python main.py target -t full -vv
 
 # Check system resources
-python scan.py --debug-info
+python main.py --debug-info
 ```
 
 ## 🔒 Security Considerations
@@ -3115,7 +3113,7 @@ Please report issues with:
 
 ### Checking for Updates
 ```bash
-python scan.py --check-updates
+python main.py --check-updates
 ```
 
 ### Development Version
